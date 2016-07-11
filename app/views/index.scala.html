@@ -1,0 +1,26 @@
+@(listaPessoas: List[Pessoa])
+
+@main("Exemplo SI1") {
+    <h2>Lista de Pessoas</h2>
+
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+        </tr>
+        @for(pessoa <- listaPessoas) {
+            <tr>
+                <td><a href="@routes.Application.pessoa(pessoa.getCpf())">@pessoa.getNome()</a></td>
+                <td>@pessoa.getCpf()</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Cadastrar Pessoa</h2>
+
+    <form method="POST" action="@routes.Application.cadastrarPessoa()">
+        <input type="text" name="nome" placeholder="Nome"/> <br>
+        <input type="text" name="cpf" placeholder="CPF"/> <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+}

@@ -1,0 +1,16 @@
+@(pessoa: Pessoa)
+
+@main("Exemplo SI1") {
+    <h2>Editar Pessoa</h2>
+
+    <form method="POST" action="@routes.Application.editarPessoa(pessoa.getCpf())">
+        <input type="text" name="nome" value="@pessoa.getNome()"/> <br>
+        <input type="text" name="cpf" value="@pessoa.getCpf()"/> <br>
+        <button type="submit">Editar</button>
+    </form>
+
+    <form method="POST" action="@routes.Application.excluirPessoa(pessoa.getCpf())">
+        <button type="submit">Excluir</button>
+    </form>
+}
+
