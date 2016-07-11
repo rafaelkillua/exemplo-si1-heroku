@@ -1,3 +1,5 @@
-# Getting started with Play (Java)
+# Introdução a Play Framework
 
-This project demonstrate how to create a simple CRUD application with Play. A screencast to the project exist on [playframework.com](http://playframework.com)
+Código usado nas aulas sobre o Play Framework, ministradas na disciplina de Sistemas de Informação I na UFCG em 2016.1, pelos monitores Rafael Sampaio e Romário Silva.
+
+- Link para a aula 01: 
