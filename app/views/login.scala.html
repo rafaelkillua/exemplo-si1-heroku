@@ -1,0 +1,19 @@
+@main("Exemplo SI1") {
+    <h2>Login</h2>
+
+    <form method="post" action="@routes.Application.logar()">
+        <input name="login" type="text" placeholder="Login"><br>
+        <input name="senha" type="password" placeholder="Senha"><br>
+        <button type="submit">Entrar</button>
+    </form>
+    <form method="get" action="@routes.Application.cadastro()">
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    @if(flash.contains("erro")) {
+        <p style="color: red;">@flash.get("erro")</p>
+    }
+    @if(flash.contains("sucesso")) {
+        <p style="color: green;">@flash.get("sucesso")</p>
+    }
+}

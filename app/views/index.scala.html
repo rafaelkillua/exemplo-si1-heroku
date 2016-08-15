@@ -1,6 +1,11 @@
 @(listaPessoas: List[Pessoa])
 
 @main("Exemplo SI1") {
+    <form method="post" action="@routes.Application.deslogar()">
+        <span>@session().get("login")</span>
+        <button type="submit">Deslogar</button>
+    </form>
+
     <h2>Lista de Pessoas</h2>
 
     <table border="1">
